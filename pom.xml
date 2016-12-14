@@ -17,11 +17,12 @@
 
     <modules>
         <module>aws-s3</module>
+        <module>logging</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-
+        <commons-io.version>2.5</commons-io.version>
     </properties>
 
     <developers>
@@ -45,6 +46,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
 
         <!-- Test dependencies -->
 
