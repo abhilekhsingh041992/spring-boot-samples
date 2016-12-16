@@ -1,5 +1,6 @@
 package example.springboot.logging.filter;
 
+import lombok.Data;
 import org.apache.commons.io.input.TeeInputStream;
 
 import javax.servlet.ReadListener;
@@ -12,15 +13,16 @@ import java.io.IOException;
 /**
  * Created by abhilekhsingh041992 on 12/14/16.
  */
+@Data
 public class RequestWrapper extends HttpServletRequestWrapper {
 
     private final ByteArrayOutputStream bos = new ByteArrayOutputStream();
-    private long id;
+    private long requestId;
 
 
     public RequestWrapper(Long requestId, HttpServletRequest request) {
         super(request);
-        this.id = requestId;
+        this.requestId = requestId;
     }
 
     @Override
@@ -54,11 +56,4 @@ public class RequestWrapper extends HttpServletRequestWrapper {
         return bos.toByteArray();
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 }

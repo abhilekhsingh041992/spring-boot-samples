@@ -1,5 +1,6 @@
 package example.springboot.logging.filter;
 
+import lombok.Data;
 import org.apache.commons.io.output.TeeOutputStream;
 
 import javax.servlet.ServletOutputStream;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by abhilekhsingh041992 on 12/14/16.
@@ -18,11 +20,11 @@ public class ResponseWrapper extends HttpServletResponseWrapper {
 
     private final ByteArrayOutputStream bos = new ByteArrayOutputStream();
     private PrintWriter writer = new PrintWriter(bos);
-    private long id;
+    private long responseId;
 
-    public ResponseWrapper(Long requestId, HttpServletResponse response) {
+    public ResponseWrapper(Long responseId, HttpServletResponse response) {
         super(response);
-        this.id = requestId;
+        this.responseId = responseId;
     }
 
     @Override
@@ -61,11 +63,5 @@ public class ResponseWrapper extends HttpServletResponseWrapper {
         return bos.toByteArray();
     }
 
-    public long getId() {
-        return id;
-    }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 }
