@@ -10,7 +10,6 @@ import java.io.Serializable;
 public class PersonData implements Serializable {
 
     @Id
-    @OneToOne
-    @JoinColumn(name="personId")
-    private Person person;
+    @OneToOne(targetEntity = Person.class)
+    private Long personId;
 }

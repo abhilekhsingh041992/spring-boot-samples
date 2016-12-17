@@ -14,7 +14,7 @@ public class Person implements Serializable {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "person")
+    @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "personId")
     @PrimaryKeyJoinColumn
     private PersonData data;
 
