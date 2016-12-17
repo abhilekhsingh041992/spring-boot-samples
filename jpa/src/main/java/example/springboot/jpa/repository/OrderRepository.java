@@ -18,7 +18,7 @@ public interface OrderRepository extends JpaRepository<CustomOrder, Long> {
     @Query("select new example.springboot.jpa.custom.OrderSummary(o, " +
             "sum(case when oi.itemStatus = 1 then 1 else 0 end) as orderedItems, " +
             "sum(case when oi.itemStatus = 1 then 1 else 0 end) as canceledItems)  " +
-            "from OrderItem oi join oi.customOrder o group by o")
+            "from OrderItem oi right join oi.customOrder o group by o")
     List<OrderSummary> findAllOrdersSummary();
 
 }
