@@ -14,5 +14,6 @@ public class AWSProperties {
 
     @NestedConfigurationProperty
     private AWSCredentials credentials;
+
     private String region;
 }

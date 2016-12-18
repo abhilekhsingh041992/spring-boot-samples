@@ -1,0 +1,9 @@
+cloud:
+    aws:
+        credentials:
+            accessKey:
+            instanceProfile: false
+            secretKey:
+        region:
+        s3:
+            bucket:

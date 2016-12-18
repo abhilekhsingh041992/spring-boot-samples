@@ -8,6 +8,7 @@ import lombok.Data;
 @Data
 public class AWSCredentials {
 
+
     private String accessKey;
 
     private String secretKey;
