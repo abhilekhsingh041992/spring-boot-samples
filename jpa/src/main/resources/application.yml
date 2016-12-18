@@ -1,0 +1,20 @@
+
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password:
+        url: jdbc:mysql://localhost:3306/custom_orders?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+    jpa:
+        database: mysql
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+        show-sql: true
+
+logging:
+    level:
+        example.springboot.logging.filter.HttpLoggingFilter: DEBUG

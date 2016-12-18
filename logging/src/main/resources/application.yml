@@ -1,0 +1,3 @@
+logging:
+    level:
+        example.springboot.logging.filter.HttpLoggingFilter: DEBUG

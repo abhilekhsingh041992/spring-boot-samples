@@ -1,4 +1,4 @@
-package example.springboot.logging.filter;
+package example.springboot.jpa.filter;
 
 import lombok.Data;
 import org.apache.commons.io.input.TeeInputStream;

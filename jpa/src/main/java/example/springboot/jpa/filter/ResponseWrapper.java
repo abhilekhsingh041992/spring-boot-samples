@@ -1,6 +1,5 @@
-package example.springboot.logging.filter;
+package example.springboot.jpa.filter;
 
-import lombok.Data;
 import org.apache.commons.io.output.TeeOutputStream;
 
 import javax.servlet.ServletOutputStream;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 
 /**
  * Created by abhilekhsingh041992 on 12/14/16.
