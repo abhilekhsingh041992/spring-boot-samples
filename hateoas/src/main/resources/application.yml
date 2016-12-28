@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:person
+    schema: classpath:schema.sql
+
